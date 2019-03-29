@@ -8,3 +8,6 @@ The user can only select 3 of the 8 checkboxes. The submit button is disabled un
 
 # form_fields_HTML5_validation.html
 Simple form with pattern attributes applied to the email, phone numbers and zip code. Values are set to auto populate with eloqua info. CSS styling is set to reflect valid and invalid input by text color. Aria-label attributes are included for accessability purposes. 
+
+# date_limit_jQuery.html
+Content is set to disappear on a stated date and time. 
