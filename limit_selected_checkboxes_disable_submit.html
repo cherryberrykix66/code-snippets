@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <style>
+
+  </style>
+</head>
+<body>
+
+
+        <p style="display: block; margin-top: 2px; margin-left: 2px; font: 13px Arial, Helvetica, sans-serif;">Please select <u><b>three sessions</b></u> you would like to attend.</p>
+        <div class="inner-wrap">
+
+        <div class="row">
+
+          <div>
+                <label id="formElement6" class="container"><input type="checkbox" name="Session1" value="Misc1" class="option[]" aria-label="Prosper checkbox"> &nbsp;&nbsp;Session 1<span class="checkmark"></span></label>
+                <br />
+
+                <label id="formElement7" class="container"><input type="checkbox" name="Session2" value="Misc2" class="option[]" aria-label="Evolve checkbox"> &nbsp;&nbsp;Session 2<span class="checkmark"></span></label>
+                <br />
+
+                <label id="formElement8" class="container"><input type="checkbox" name="Session3" value="Misc3" class="option[]" aria-label="Sustain checkbox"> &nbsp;&nbsp;Session 3<span class="checkmark"></span></label>
+                <br />
+
+                <label id="formElement9" class="container"><input type="checkbox" name="Session4" value="Misc4" class="option[]" aria-label="Cultivate checkbox"> &nbsp;&nbsp;Session 4<span class="checkmark"></span></label>
+                <br />
+
+                <label id="formElement10" class="container"><input type="checkbox" name="Session5" value="Misc5" class="option[]" aria-label="Nurture checkbox"> &nbsp;&nbsp;Session 5<span class="checkmark"></span></label>
+                <br />
+
+                <label id="formElement11" class="container"><input type="checkbox" name="Session6" value="Misc6" class="option[]" aria-label="Flourish checkbox"> &nbsp;&nbsp;Session 6<span class="checkmark"></span></label>
+                <br />
+
+                <label id="formElement12" class="container"><input type="checkbox" name="Session7" value="Misc7" class="option[]" aria-label="Thrive checkbox"> &nbsp;&nbsp;Session 7<span class="checkmark"></span></label>
+                <br />
+
+                <label id="formElement13" class="container"><input type="checkbox" name="Session8" value="Misc8" class="option[]" aria-label="Venture checkbox"> &nbsp;&nbsp;Session 8<span class="checkmark"></span></label>
+
+
+          </div>
+
+
+
+
+
+                <!--*********************** SCRIPT LIMITING THE SELECTION OF CHECKBOXES TO 3 ********************************* -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+                <script>
+
+                $(function(){
+                    var requiredCheckboxes = $('.options :checkbox[required]');
+                    requiredCheckboxes.change(function(){
+                        if(requiredCheckboxes.is(':checked')) {
+                            requiredCheckboxes.removeAttr('required');
+                        } else {
+                            requiredCheckboxes.attr('required', 'required');
+                        }
+                    });
+                });
+
+                $(document).ready(function () {
+                    $("input[class='option[]']").change(function () {
+                        var maxAllowed = 3;
+                        var cnt = $("input[class='option[]']:checked").length;
+                        if (cnt > maxAllowed) {
+                            $(this).prop("checked", "");
+                            alert('You can select a maximum of ' + maxAllowed + ' sessions!!');
+                        }
+                    });
+                });
+
+
+
+
+                function CheckBoxCount() {
+                    var inputList = document.getElementsByTagName("input");
+                    var numChecked = 0;
+
+                    for (var i = 0; i < inputList.length; i++) {
+                        if (inputList[i].type == "checkbox" && inputList[i].checked) {
+                            numChecked = numChecked + 1;
+                        }
+                    }
+                    if (numChecked < 3) {
+                        alert("Please select a minimum of 3 sessions."); return false;
+                    } else if (numChecked > 3) {
+                        alert("You can select a maximum of 3 sessions!"); return false;
+                    }
+
+
+                    return true;
+
+                }
+
+
+
+                $(function() {
+                  var chk = $("input[class='option[]']");
+                  var btn = $('input[type=submit]');
+
+                   chk.on( 'change', function() {
+                      if( $(':checkbox:checked').length === 3 ) {
+                         btn.prop( 'disabled', false );
+                      } else {
+                         btn.prop( 'disabled', true );
+                      }
+                   });
+                });
+
+
+                </script>
+
+        </div><!-- END class="row" -->
+      </div> <!-- END INNER WRAP -->
+      <!-- ********************** SUBMIT BUTTON ******************************************** -->
+
+      <div class="col-25" id="formElement18">
+      <input style="font: bold 15px 'Open Sans', Arial, sans-serif; text-transform: uppercase; float:left; margin: 40px 0px 0px 0px;" type="submit" value="Submit">
+      </div>
+
+      <div class="col-75">
+
+      </div>
+</body>
+</html>
