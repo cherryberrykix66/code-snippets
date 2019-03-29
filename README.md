@@ -17,3 +17,6 @@ The second select field will populate based on the current option in the first s
 
 # text_field_appear_with_checkbox.html
 A hidden input field will appear when the checkbox is selected.
+
+# dependent_hidden_select_field.html
+A second select field will appear when certain options are selected in the first field.
