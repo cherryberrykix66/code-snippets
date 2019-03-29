@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+
+  <title>Page Title</title>
+  <style>
+  body { background-color: #eeee}
+
+
+
+  </style>
+</head>
+<body>
+
+    <form>
+      <!--************************************* CHECK BOX ELEMENT ************************************* -->
+              <div id="formElement4">
+                  <label class="check-box-container" for="singleCheckbox">Please send me updates from Regis University via text message.
+                    <input id="singleCheckbox" name="singleCheckbox" class="singleCheckbox" value="on" type="checkbox" onclick="checkFunction()">
+                    <span style="width: 25px; height: 25px;" class="checkmark"></span>
+
+                  </label>
+              </div>
+
+
+      <!--************************************* PHONE ************************************* -->
+
+              <div id="formElement5" style="display:none; padding-top: 20px;">
+                  <label for="field5">
+                  <span>Phone Number *</span>
+                  <input id="field5" name="mobilePhone" type="text" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="Include numbers only">
+                  </label>
+              </div>
+    </form>
+
+
+  <script type="text/javascript">
+
+          var checkBox = document.querySelector('input[type="checkbox"]');
+          var textInput = document.querySelector('#field5');
+
+          function toggleRequired() {
+
+              if (textInput.hasAttribute('required') !== true) {
+                  textInput.setAttribute('required','required');
+              }
+
+              else {
+                  textInput.removeAttribute('required');
+              }
+          }
+
+          checkBox.addEventListener('change',toggleRequired,false);
+
+
+          // <!-- ********************* SHOW PHONE FIELD WHEN CHECK BOX ELEMENT ON ********************* -->
+
+
+                  function checkFunction() {
+                  var checkBox = document.getElementById("singleCheckbox");
+                  var formElement5 = document.getElementById("formElement5");
+                  if (checkBox.checked == true){
+                  formElement5.style.display = "block";
+                  } else {
+                  formElement5.style.display = "none";
+                  }
+                  }
+
+  </script>
+
+</body>
+</html>
