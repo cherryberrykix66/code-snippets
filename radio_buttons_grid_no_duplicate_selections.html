@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="https://cdn.regis.edu/javascript/modernizr/modernizr.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+
+  <title>Page Title</title>
+  <style>
+
+  </style>
+</head>
+<body>
+
+
+
+
+
+          <div>
+              <label for="field9">Label 1&nbsp;</label>
+          </div>
+
+
+                <div>
+                  <span id="input_1" class="limit-this1"><label class="sessions"><input type="radio" name="radioButtons2" value="1" required="required"> 1</label></span>
+                  <span id="input_2" class="limit-this2"><label class="sessions"><input type="radio" name="radioButtons2" value="2" required="required"> 2</label></span>
+                  <span id="input_3" class="limit-this3"><label class="sessions"><input type="radio" name="radioButtons2" value="3" required="required"> 3</label></span>
+                  <span id="input_4" class="limit-this4"><label class="sessions"><input type="radio" name="radioButtons2" value="4" required="required"> 4</label></span>
+                  <span id="input_5" class="limit-this5"><label class="sessions"><input type="radio" name="radioButtons2" value="5" required="required"> 5</label></span>
+                </div><!-- CAMPUS TOUR -->
+
+
+          <div>
+            <label for="field10">Label 2&nbsp;</label>
+          </div>
+
+
+              <div>
+                <span id="input_1" class="limit-this1"><label class="sessions"><input type="radio" name="radioButtons3" value="1" required="required"> 1</label></span>
+                <span id="input_2" class="limit-this2"><label class="sessions"><input type="radio" name="radioButtons3" value="2" required="required"> 2</label></span>
+                <span id="input_3" class="limit-this3"><label class="sessions"><input type="radio" name="radioButtons3" value="3" required="required"> 3</label></span>
+                <span id="input_4" class="limit-this4"><label class="sessions"><input type="radio" name="radioButtons3" value="4" required="required"> 4</label></span>
+                <span id="input_5" class="limit-this5"><label class="sessions"><input type="radio" name="radioButtons3" value="5" required="required"> 5</label></span>
+              </div><!-- MOCK CLASS -->
+
+
+          <div>
+            <label for="field11">Label 3&nbsp;</label>
+          </div>
+
+
+
+                <div>
+                  <span id="input_1" class="limit-this1"><label class="sessions"><input type="radio" name="radioButtons4" value="1" required="required"> 1</label></span>
+                  <span id="input_2" class="limit-this2"><label class="sessions"><input type="radio" name="radioButtons4" value="2" required="required"> 2</label></span>
+                  <span id="input_3" class="limit-this3"><label class="sessions"><input type="radio" name="radioButtons4" value="3" required="required"> 3</label></span>
+                  <span id="input_4" class="limit-this4"><label class="sessions"><input type="radio" name="radioButtons4" value="4" required="required"> 4</label></span>
+                  <span id="input_5" class="limit-this5"><label class="sessions"><input type="radio" name="radioButtons4" value="5" required="required"> 5</label></span>
+                </div><!-- FINANCIAL AID APPT -->
+
+
+          <div>
+            <label for="field12">Label 4&nbsp;</label>
+          </div>
+
+
+
+                <div>
+                  <span id="input_1" class="limit-this1"><label class="sessions"><input type="radio" name="radioButtons5" value="1" required="required"> 1</label></span>
+                  <span id="input_2" class="limit-this2"><label class="sessions"><input type="radio" name="radioButtons5" value="2" required="required"> 2</label></span>
+                  <span id="input_3" class="limit-this3"><label class="sessions"><input type="radio" name="radioButtons5" value="3" required="required"> 3</label></span>
+                  <span id="input_4" class="limit-this4"><label class="sessions"><input type="radio" name="radioButtons5" value="4" required="required"> 4</label></span>
+                  <span id="input_5" class="limit-this5"><label class="sessions"><input type="radio" name="radioButtons5" value="5" required="required"> 5</label></span>
+                </div><!-- Health Sciences Lab Tour -->
+
+
+          <div>
+            <label for="field13">Label 5&nbsp;</label>
+          </div>
+
+
+
+              <div>
+                <span id="input_1" class="limit-this1"><label class="sessions"><input type="radio" name="radioButtons6" value="1" required="required"> 1</label></span>
+                <span id="input_2" class="limit-this2"><label class="sessions"><input type="radio" name="radioButtons6" value="2" required="required"> 2</label></span>
+                <span id="input_3" class="limit-this3"><label class="sessions"><input type="radio" name="radioButtons6" value="3" required="required"> 3</label></span>
+                <span id="input_4" class="limit-this4"><label class="sessions"><input type="radio" name="radioButtons6" value="4" required="required"> 4</label></span>
+                <span id="input_5" class="limit-this5"><label class="sessions"><input type="radio" name="radioButtons6" value="5" required="required"> 5</label></span>
+              </div><!-- Current Student Advice and Insight Session -->
+
+
+          <script>
+          var selectedVal1 = 1;
+
+          $('.limit-this1 input[type="radio"]').click(function(){
+              var a = $('.limit-this1 input[type="radio"]:checked').length;
+              var b = ($(this).is(':checked')?1:0);
+              if(a>selectedVal1){ if($(this).is(':checked')){ $(this).removeAttr('checked');}}
+              else{
+
+               if($(this).is(':checked')&&$(this).data('val')==1) {$(this).removeAttr('checked');
+                   $(this).data('val', 0);
+               }else
+                 $(this).data('val', b);
+              }
+
+          });
+
+          var selectedVal2 = 1;
+
+          $('.limit-this2 input[type="radio"]').click(function(){
+              var a = $('.limit-this2 input[type="radio"]:checked').length;
+              var b = ($(this).is(':checked')?1:0);
+              if(a>selectedVal2){ if($(this).is(':checked')){ $(this).removeAttr('checked');}}
+              else{
+
+               if($(this).is(':checked')&&$(this).data('val')==1) {$(this).removeAttr('checked');
+                   $(this).data('val', 0);
+               }else
+                 $(this).data('val', b);
+              }
+
+          });
+
+          var selectedVal3 = 1;
+
+          $('.limit-this3 input[type="radio"]').click(function(){
+              var a = $('.limit-this3 input[type="radio"]:checked').length;
+              var b = ($(this).is(':checked')?1:0);
+              if(a>selectedVal3){ if($(this).is(':checked')){ $(this).removeAttr('checked');}}
+              else{
+
+               if($(this).is(':checked')&&$(this).data('val')==1) {$(this).removeAttr('checked');
+                   $(this).data('val', 0);
+               }else
+                 $(this).data('val', b);
+              }
+
+          });
+
+          var selectedVal4 = 1;
+
+          $('.limit-this4 input[type="radio"]').click(function(){
+              var a = $('.limit-this4 input[type="radio"]:checked').length;
+              var b = ($(this).is(':checked')?1:0);
+              if(a>selectedVal4){ if($(this).is(':checked')){ $(this).removeAttr('checked');}}
+              else{
+
+               if($(this).is(':checked')&&$(this).data('val')==1) {$(this).removeAttr('checked');
+                   $(this).data('val', 0);
+               }else
+                 $(this).data('val', b);
+              }
+
+          });
+
+          var selectedVal5 = 1;
+
+          $('.limit-this5 input[type="radio"]').click(function(){
+              var a = $('.limit-this5 input[type="radio"]:checked').length;
+              var b = ($(this).is(':checked')?1:0);
+              if(a>selectedVal5){ if($(this).is(':checked')){ $(this).removeAttr('checked');}}
+              else{
+
+               if($(this).is(':checked')&&$(this).data('val')==1) {$(this).removeAttr('checked');
+                   $(this).data('val', 0);
+               }else
+                 $(this).data('val', b);
+              }
+
+          });
+
+          </script>
+
+
+
+</body>
+</html>
