@@ -14,3 +14,6 @@ Content is set to disappear on a stated date and time.
 
 # dependent_select_fields.html
 The second select field will populate based on the current option in the first select field. 
+
+# text_field_appear_with_checkbox.html
+A hidden input field will appear when the checkbox is selected.
