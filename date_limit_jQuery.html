@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <title>Page Title</title>
+  <style>
+
+  </style>
+</head>
+<body>
+
+  <div class="date-limit">HELLO WORLD!</div>
+
+          <script>
+
+                    //********************************************
+                    window.setInterval(function() {
+
+                    var current = new Date();
+                    var expiry = new Date("March 6, 2019 15:00:00")
+
+                    if (current.getTime() > expiry.getTime()) {
+                    $('.date-limit').hide();
+
+                    } else if (current.getTime() < expiry.getTime()) {
+                    $('.date-limit').show();
+                    }
+
+                    }, 0);
+
+
+
+          </script>
+</body>
+</html>
